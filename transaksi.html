@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Penjualan Barang - Transaksi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="CTNusa Logo.png" width="80px" height="auto" alt="Logo Aplikasi" class="logo">
+            <h1>Admin Penjualan Barang</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="transaksi.html">Transaksi</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h2>Input Transaksi Baru</h2>
+        <form id="transaksiForm" name="DBAdmin">
+            <label for="namaTransaksi">Nama Transaksi:</label>
+            <input type="text" id="namaTransaksi" name="namaTransaksi" required>
+            <div class="error-message" id="errorNamaTransaksi">Nama Transaksi harus diisi.</div>
+
+            <label for="jumlah">Jumlah:</label>
+            <input type="number" id="jumlah" name="jumlah" min="1" required>
+            <div class="error-message" id="errorJumlah">Jumlah harus diisi dan minimal 1.</div>
+
+            <label for="kategori">Kategori:</label>
+            <select id="kategori" name="kategori" required>
+                <option value="">Pilih Kategori</option>
+                <option value="Elektronik">Elektronik</option>
+                <option value="Pakaian">Pakaian</option>
+                <option value="Makanan">Makanan</option>
+                <option value="Minuman">Minuman</option>
+                <option value="Lain-lain">Lain-lain</option>
+            </select>
+            <div class="error-message" id="errorKategori">Kategori harus dipilih.</div>
+
+            <button type="submit">Simpan Transaksi</button>
+        </form>
+
+        <hr>
+
+        <h2><a href="https://docs.google.com/spreadsheets/d/1ZxtfhQu3UHVomZiqn0cfWGemmDyQ5zedAdrkrA44ssE/edit?usp=sharing">Daftar Transaksi</a></h2>
+        <p>Silakan klik link "Daftar Transaksi" di atas untuk melihat semua transaksi yang tersimpan.</p>
+        <p>Untuk tujuan demonstrasi ini, tabel daftar transaksi berada di halaman terpisah.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Admin Penjualan Barang. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script src="effect.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzoNQlqGwdPNMPrhnQAc5sQuG5f61EB_YadC9csqAiTCgREdviCWLxuE7wtc1-84KUK/exec'
+        const form = document.forms['DBAdmin']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
