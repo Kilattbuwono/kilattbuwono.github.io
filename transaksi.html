@@ -9,7 +9,6 @@
 <body>
     <header>
         <div class="header-content">
-            <img src="CTNusa Logo.png" width="80px" height="auto" alt="Logo Aplikasi" class="logo">
             <h1>Admin Penjualan Barang</h1>
         </div>
         <nav>
@@ -26,20 +25,20 @@
         <h2>Input Transaksi Baru</h2>
         <form id="transaksiForm" name="DBAdmin">
             <label for="namaTransaksi">Nama Transaksi:</label>
-            <input type="text" id="namaTransaksi" name="namaTransaksi" required>
+            <input type="text" id="namaTransaksi" name="namaTransaksi" placeholder="Nama Transaksi" required>
             <div class="error-message" id="errorNamaTransaksi">Nama Transaksi harus diisi.</div>
 
             <label for="jumlah">Jumlah:</label>
-            <input type="number" id="jumlah" name="jumlah" min="1" required>
-            <div class="error-message" id="errorJumlah">Jumlah harus diisi dan minimal 1.</div>
+            <input type="number" id="jumlah" name="jumlah" min="1" placeholder="Tulis Jumlah" required>
+            <div class="error-message" id="error_Jumlah">Jumlah harus diisi dan minimal 1.</div>
 
             <label for="kategori">Kategori:</label>
             <select id="kategori" name="kategori" required>
                 <option value="">Pilih Kategori</option>
                 <option value="Elektronik">Elektronik</option>
                 <option value="Pakaian">Pakaian</option>
-                <option value="Makanan">Makanan</option>
-                <option value="Minuman">Minuman</option>
+                <option value="Makanan/Minuman">Makanan/Minuman</option>
+                <option value="Parabot">Parabot</option>
                 <option value="Lain-lain">Lain-lain</option>
             </select>
             <div class="error-message" id="errorKategori">Kategori harus dipilih.</div>
@@ -50,8 +49,7 @@
         <hr>
 
         <h2><a href="https://docs.google.com/spreadsheets/d/1ZxtfhQu3UHVomZiqn0cfWGemmDyQ5zedAdrkrA44ssE/edit?usp=sharing">Daftar Transaksi</a></h2>
-        <p>Silakan klik link "Daftar Transaksi" di atas untuk melihat semua transaksi yang tersimpan.</p>
-        <p>Untuk tujuan demonstrasi ini, tabel daftar transaksi berada di halaman terpisah.</p>
+        <p>Klik "Daftar Transaksi" di atas untuk melihat semua transaksi yang tersimpan.</p>
     </main>
 
     <footer>
