@@ -1,13 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Validasi Formulir Transaksi
     const transaksiForm = document.getElementById('transaksiForm');
     if (transaksiForm) {
         transaksiForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Mencegah form submit secara default
+            event.preventDefault();
 
             let isValid = true;
 
-            // Validasi Nama Transaksi
             const namaTransaksi = document.getElementById('namaTransaksi');
             const errorNamaTransaksi = document.getElementById('errorNamaTransaksi');
             if (namaTransaksi.value.trim() === '') {
@@ -17,9 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 errorNamaTransaksi.style.display = 'none';
             }
 
-            // Validasi Jumlah
             const jumlah = document.getElementById('jumlah');
-            const errorJumlah = document.getElementById('errorJumlah');
+            const errorJumlah = document.getElementById('error_Jumlah');
             if (jumlah.value.trim() === '' || parseInt(jumlah.value) < 1) {
                 errorJumlah.style.display = 'block';
                 isValid = false;
@@ -27,36 +24,34 @@ document.addEventListener('DOMContentLoaded', function() {
                 errorJumlah.style.display = 'none';
             }
 
-            // Validasi Kategori
             const kategori = document.getElementById('kategori');
             const errorKategori = document.getElementById('errorKategori');
             if (kategori.value === '') {
                 errorKategori.style.display = 'block';
                 isValid = false;
+                 errorMessage += 'Kategorinya Pilih Dulu! <br>'
             } else {
                 errorKategori.style.display = 'none';
             }
 
             if (isValid) {
-                alert('Formulir transaksi berhasil divalidasi dan siap dikirim!');
+                alert('Formulir Udah Masuk');
                 // Di sini Anda bisa menambahkan kode untuk mengirim data ke server
                 // Misalnya: transaksiForm.submit();
                 // Atau menggunakan fetch API untuk mengirim data secara AJAX
             } else {
-                alert('Harap lengkapi semua kolom yang wajib diisi.');
+                alert('Isi Dulu Semuanya');
             }
         });
     }
 
-    // Validasi Formulir Login
     const loginForm = document.getElementById('loginForm');
     if (loginForm) {
         loginForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Mencegah form submit secara default
+            event.preventDefault();
 
             let isValid = true;
 
-            // Validasi Username
             const username = document.getElementById('username');
             const errorUsername = document.getElementById('errorUsername');
             if (username.value.trim() === '') {
@@ -66,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 errorUsername.style.display = 'none';
             }
 
-            // Validasi Password
             const password = document.getElementById('password');
             const errorPassword = document.getElementById('errorPassword');
             if (password.value.trim() === '') {
@@ -77,11 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             if (isValid) {
-                alert('Login berhasil! (Ini hanya validasi sisi klien)');
-                // Di sini Anda akan mengirim data login ke server untuk otentikasi
-                // loginForm.submit();
+                alert('Dah Berhasil Nih');
             } else {
-                alert('Username dan Password harus diisi.');
+                alert('Username atau Password isi dulu!');
             }
         });
     }
