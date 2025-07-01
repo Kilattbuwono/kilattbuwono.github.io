@@ -12,7 +12,7 @@ body {
 
 header {
     background-color: transparent;
-    color: white;
+    color: rgb(30, 85, 185);
     padding: 1rem 2rem;
     display: flex;
     justify-content: right;
@@ -27,6 +27,7 @@ header {
     justify-content: center;
     position: relative;
     width: 100%;
+    color: #0056b3;
 }
 
 .judul-tengah {
@@ -35,7 +36,7 @@ header {
     transform: translateX(-50%);
     margin: 0;
     font-size: 1.8em;
-    color: #f8f9fa;
+    color: #0158af;
 }
 
 .logo {
@@ -63,15 +64,19 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 5px 0;
     transition: color 0.3s ease;
+    background-color: #ff2323;
+    color: #fbff00;
+    padding: 1px 0px;
+    border-radius: 8px;
+    display: inline-block;
 }
 
 nav ul li a:hover {
-    color: #cce5ff;
+    color: #ffffff;
 }
 
 .content {
@@ -81,6 +86,9 @@ nav ul li a:hover {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: 0;
 }
 
 .content:hover{
@@ -102,7 +110,7 @@ nav ul li a:hover {
 
 .content1 h2 {
     color: white;
-}
+}   
 
 .content1 p {
     color: white;
@@ -205,7 +213,7 @@ footer {
     color: white;
     text-align: center;
     padding: 0.5rem 0;
-    margin-top: 35px;
+    margin-top: 65px;
 }
 .footer1 {
     background-color: transparent;
@@ -221,7 +229,16 @@ footer {
     color: white;
     text-align: center;
     padding: 0.5rem 0;
-    margin-top: 140px;
+    margin-top: 170px;
+    height: 10px;
+}
+
+.footerlog {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 0.5rem 0;
+    margin-top: 260px;
     height: 10px;
 }
 
