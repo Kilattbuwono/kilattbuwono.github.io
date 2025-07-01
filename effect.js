@@ -36,9 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (isValid) {
                 alert('Formulir Udah Masuk');
-                // Di sini Anda bisa menambahkan kode untuk mengirim data ke server
-                // Misalnya: transaksiForm.submit();
-                // Atau menggunakan fetch API untuk mengirim data secara AJAX
             } else {
                 alert('Isi Dulu Semuanya');
             }
